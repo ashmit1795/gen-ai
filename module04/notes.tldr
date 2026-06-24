@@ -1,0 +1,3649 @@
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 2,
+		"sequences": {
+			"com.tldraw.store": 5,
+			"com.tldraw.asset": 1,
+			"com.tldraw.camera": 1,
+			"com.tldraw.document": 2,
+			"com.tldraw.instance": 26,
+			"com.tldraw.instance_page_state": 5,
+			"com.tldraw.page": 1,
+			"com.tldraw.instance_presence": 6,
+			"com.tldraw.pointer": 1,
+			"com.tldraw.shape": 4,
+			"com.tldraw.user": 1,
+			"com.tldraw.asset.image": 6,
+			"com.tldraw.asset.video": 5,
+			"com.tldraw.asset.bookmark": 2,
+			"com.tldraw.shape.group": 0,
+			"com.tldraw.shape.text": 4,
+			"com.tldraw.shape.bookmark": 2,
+			"com.tldraw.shape.draw": 4,
+			"com.tldraw.shape.geo": 11,
+			"com.tldraw.shape.note": 12,
+			"com.tldraw.shape.line": 5,
+			"com.tldraw.shape.frame": 1,
+			"com.tldraw.shape.arrow": 8,
+			"com.tldraw.shape.highlight": 3,
+			"com.tldraw.shape.embed": 4,
+			"com.tldraw.shape.image": 5,
+			"com.tldraw.shape.video": 4,
+			"com.tldraw.binding.arrow": 1
+		}
+	},
+	"records": [
+		{
+			"x": 0,
+			"y": 0,
+			"lastActivityTimestamp": 0,
+			"meta": {},
+			"id": "pointer:pointer",
+			"typeName": "pointer"
+		},
+		{
+			"meta": {},
+			"id": "page:G3BFbaWZOCVW-5gmric6J",
+			"name": "Tool Calling",
+			"index": "a4glge4V",
+			"typeName": "page"
+		},
+		{
+			"meta": {},
+			"id": "binding:zvGQuRkXavogE1fWVZVt2",
+			"type": "arrow",
+			"fromId": "shape:bLyNQJzDLNby2ydzU_XIi",
+			"toId": "shape:HmK_YHd3rrP-tNit8O0on",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.1778386668119487,
+					"y": 0.8525074646536228
+				},
+				"snap": "none",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 617.7124953819089,
+			"y": 441.7878720814082,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Kg6i0GDK8aHl3vZ8u_c1m",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 134.2604217529297,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8137953976245416,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "trained till "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "decemer 2025"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "a87AsWOV",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:0wTgj9g7hJOXZFZgXPuuk",
+			"type": "arrow",
+			"fromId": "shape:szJp0_xDv97N-dK-jUwzI",
+			"toId": "shape:HmK_YHd3rrP-tNit8O0on",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.9247604412064921,
+					"y": 0.9528024048931831
+				},
+				"snap": "none",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"meta": {},
+			"id": "page:HhmFImNgzPD7a0L-HBari",
+			"name": "Structured Output",
+			"index": "a38mRqCV",
+			"typeName": "page"
+		},
+		{
+			"x": 249.666748046875,
+			"y": -125.66664123535156,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:GWx-PRkoV447UNKcW3G5E",
+			"type": "text",
+			"props": {
+				"color": "light-violet",
+				"size": "s",
+				"w": 1080.0521240234375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.6898297845551662,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Structured Output ensures the LLM returns data that follows a predefined "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "JSON Schema"
+								},
+								{
+									"type": "text",
+									"text": " instead of free-form text."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Use it when you need:"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Data extraction"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Classification"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Form generation"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Agent workflows"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "API responses"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Database inserts"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:HhmFImNgzPD7a0L-HBari",
+			"index": "a3hQmb6V",
+			"typeName": "shape"
+		},
+		{
+			"x": 202.37341868617563,
+			"y": -186.90036312615496,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:e349BJ0D4jh-OhRWS5kQn",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "s",
+				"fill": "none",
+				"color": "light-green",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 144.7950937892947,
+					"y": -117.36015851242183
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:HhmFImNgzPD7a0L-HBari",
+			"index": "a89YCiyV",
+			"typeName": "shape"
+		},
+		{
+			"x": 54.829460363749945,
+			"y": 510.5593432817455,
+			"z": 0.5445769649624838,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"x": 540.7124648643307,
+			"y": 271.7878720814082,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:HmK_YHd3rrP-tNit8O0on",
+			"type": "geo",
+			"props": {
+				"w": 243.66668701171875,
+				"h": 113,
+				"geo": "rectangle",
+				"dash": "draw",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"color": "grey",
+				"labelColor": "black",
+				"fill": "none",
+				"size": "s",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "LLM"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "a3HX0XYV",
+			"typeName": "shape"
+		},
+		{
+			"x": 682.3791213584714,
+			"y": 597.7878720814082,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:szJp0_xDv97N-dK-jUwzI",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "s",
+				"fill": "semi",
+				"color": "yellow",
+				"labelColor": "black",
+				"bend": -126.65747067980243,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 83.66665649414062,
+					"y": -212.3333282470703
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "aGoJgZzl",
+			"typeName": "shape"
+		},
+		{
+			"x": 142.33334350585938,
+			"y": 79,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:xC48xb4tGLrLcIIGbxgf1",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "m",
+				"w": 261.26043701171875,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Tool/Function Calling"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "a1nFfXsV",
+			"typeName": "shape"
+		},
+		{
+			"x": 209,
+			"y": -335,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:2mcmVaUmiTk6ZBhkjDzCl",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 1092.1458740234375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "bulletList",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "calling LLM from our code"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "hosting an LLM is very resource intensive"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "so, we usually use the LLM hosted and maintained by any company"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "and the hosting company exposes api endpoints to interact with the LLM"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "so, from our code we can directly call the api endpoints with the api key using \"fetch\", \"axios\" or any other library"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "or, we can use the SDK provided by the LLM provider, which makes thing easier and makes the code cleaner"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "ex: groq, openai, gemini etc.  "
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a2sebEWV",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:BfcRnEmhGhsa7KKRoRznB",
+			"type": "arrow",
+			"fromId": "shape:4x-4_67ljcPCq3UTmAgVk",
+			"toId": "shape:HmK_YHd3rrP-tNit8O0on",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.01231190047680059,
+					"y": 0.504424778761062
+				},
+				"snap": "none",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 236.05621758534426,
+			"y": -111.77727608122797,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:GjxzDEBKAglDjCfaya_n9",
+			"type": "geo",
+			"props": {
+				"w": 808.1049787496986,
+				"h": 488,
+				"geo": "rectangle",
+				"dash": "draw",
+				"growY": 168,
+				"url": "",
+				"scale": 1,
+				"color": "blue",
+				"labelColor": "black",
+				"fill": "solid",
+				"size": "s",
+				"font": "sans",
+				"align": "start",
+				"verticalAlign": "middle",
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "import Groq from \"groq-sdk\";"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "export async function main() {"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "  const chatCompletion = await getGroqChatCompletion();"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "  // Print the completion returned by the LLM."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "  console.log(chatCompletion.choices[0]?.message?.content || \"\");"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "}"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "export async function getGroqChatCompletion() {"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "  return "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "http://groq.chat",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": null
+											}
+										}
+									],
+									"text": "groq.chat"
+								},
+								{
+									"type": "text",
+									"text": ".completions.create({"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "    messages: ["
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "\t\t{"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "        role: \"system\","
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "        content: \"You are Jarvis, a smart powerful assistant.\","
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "      },"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "      {"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "        role: \"user\","
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "        content: \"Explain the importance of fast language models\","
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "      },"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "    ],"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "    model: \"openai/gpt-oss-20b\","
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "  });"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "}"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a4TkUgVl",
+			"typeName": "shape"
+		},
+		{
+			"x": 265.3904796310213,
+			"y": 60.632012145000715,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:4iLTPL3_5JgF4ozQXzN5U",
+			"type": "text",
+			"props": {
+				"color": "light-violet",
+				"size": "s",
+				"w": 750.6097991208673,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 0.6827437924492389,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 2
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "1. Strict Mode ("
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "code"
+										}
+									],
+									"text": "strict: true"
+								},
+								{
+									"type": "text",
+									"text": ")"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Uses "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "constrained decoding"
+								},
+								{
+									"type": "text",
+									"text": "."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Guarantees"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "✅ Always valid JSON"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "✅ Always matches schema"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "✅ No validation retries required"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Requirements"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "bulletList",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Every field must be required."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Every object must have:"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "code"
+										}
+									],
+									"text": "{"
+								},
+								{
+									"type": "hardBreak",
+									"attrs": {
+										"dir": "auto"
+									},
+									"marks": [
+										{
+											"type": "code"
+										}
+									]
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "code"
+										}
+									],
+									"text": "  \"additionalProperties\": false"
+								},
+								{
+									"type": "hardBreak",
+									"attrs": {
+										"dir": "auto"
+									},
+									"marks": [
+										{
+											"type": "code"
+										}
+									]
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "code"
+										}
+									],
+									"text": "}"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Supported Models"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "code"
+														}
+													],
+													"text": "openai/gpt-oss-20b"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "code"
+														}
+													],
+													"text": "openai/gpt-oss-120b"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:HhmFImNgzPD7a0L-HBari",
+			"index": "a5yo2WyV",
+			"typeName": "shape"
+		},
+		{
+			"x": 121.36458587646484,
+			"y": 109.66665649414062,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:QTF4BCb5bFskbfViM2yFK",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "m",
+				"w": 319.1770935058594,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "LLM Settings/Parameters:"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:aOnyP85v_z5P9dfj0ZfH9",
+			"index": "a1bCAMnV",
+			"typeName": "shape"
+		},
+		{
+			"x": 110.66665649414062,
+			"y": -208,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:YqG6U4zctbM-c2XuxK-rb",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "m",
+				"w": 224.9479217529297,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Structured Output"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:HhmFImNgzPD7a0L-HBari",
+			"index": "a1rAULIl",
+			"typeName": "shape"
+		},
+		{
+			"x": 625.3791518760495,
+			"y": 582.7879025989863,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:_cHnhkYykmsbaOmuQjAfT",
+			"type": "geo",
+			"props": {
+				"w": 161,
+				"h": 87.666748046875,
+				"geo": "x-box",
+				"dash": "draw",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"color": "yellow",
+				"labelColor": "black",
+				"fill": "semi",
+				"size": "s",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Calendar "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Tool"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "aF8nhYzl",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:Xiy3DYCHm8zRvBvN1sjMp",
+			"type": "arrow",
+			"fromId": "shape:e349BJ0D4jh-OhRWS5kQn",
+			"toId": "shape:46MYX-odWK3qU0CBmXd5n",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.05873170008671375,
+					"y": 0.6244815244414497
+				},
+				"snap": "none",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 223.6666717529297,
+			"y": -149,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:KAj27WP-6DWi7kA2MgX2w",
+			"type": "text",
+			"props": {
+				"color": "violet",
+				"size": "s",
+				"w": 254.17709350585938,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "What is Structured Output?"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						}
+					]
+				}
+			},
+			"parentId": "page:HhmFImNgzPD7a0L-HBari",
+			"index": "a2syCRgV",
+			"typeName": "shape"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [],
+			"hoveredShapeId": "shape:QTF4BCb5bFskbfViM2yFK",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:aOnyP85v_z5P9dfj0ZfH9",
+			"pageId": "page:aOnyP85v_z5P9dfj0ZfH9",
+			"typeName": "instance_page_state"
+		},
+		{
+			"meta": {},
+			"id": "binding:mEHptTfVZMYRVISj_jP-m",
+			"type": "arrow",
+			"fromId": "shape:szJp0_xDv97N-dK-jUwzI",
+			"toId": "shape:_cHnhkYykmsbaOmuQjAfT",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.3540370775305707,
+					"y": 0.1711021546550519
+				},
+				"snap": "none",
+				"terminal": "start"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 426.045777852612,
+			"y": 516.2252788651602,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:8NK3S2FOCDDBaUp_H5Tp4",
+			"type": "geo",
+			"props": {
+				"w": 140,
+				"h": 90.79187344421452,
+				"geo": "cloud",
+				"dash": "solid",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"color": "yellow",
+				"labelColor": "black",
+				"fill": "semi",
+				"size": "s",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Web Search Tool"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "aD6L1njV",
+			"typeName": "shape"
+		},
+		{
+			"x": 296.045777852612,
+			"y": 331.12121558726756,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:4x-4_67ljcPCq3UTmAgVk",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "s",
+				"fill": "semi",
+				"color": "grey",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": -70.33329772949219,
+					"y": 1
+				},
+				"end": {
+					"x": 244.3333740234375,
+					"y": -1.666656494140625
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "when iphone16 was launched ?"
+								}
+							]
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "a43FEl3V",
+			"typeName": "shape"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [],
+			"hoveredShapeId": "shape:MSJTgcijBe9pioeWk1E9b",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": -691.5676260409363,
+			"y": -109.0394240269909,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:rSj7_nbReM4tzC7AUjRve",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "s",
+				"w": 757,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "In messages, we can add more roles"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "and content:"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "System Role/Prompt : It helps to give persona to the LLM; we can"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "define behaviour etc. etc. ; "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "code"
+										}
+									],
+									"text": "This sets the behavior of the assistant and "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "code"
+										}
+									],
+									"text": "can be used to provide specific instructions for how it should behave "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "code"
+										}
+									],
+									"text": "throughout the conversation."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a66CvvXV",
+			"typeName": "shape"
+		},
+		{
+			"name": "",
+			"color": "#F2555A",
+			"imageUrl": "",
+			"meta": {},
+			"id": "user:5thOvGYqYxFVwISXFHSNm",
+			"typeName": "user"
+		},
+		{
+			"meta": {},
+			"id": "binding:FL58kK0p7-CfAfkZR99Ou",
+			"type": "arrow",
+			"fromId": "shape:vXWjd5_KUXmMX33N9tsFK",
+			"toId": "shape:HmK_YHd3rrP-tNit8O0on",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.4815320240416709,
+					"y": 0.6902654867256637
+				},
+				"snap": "none",
+				"terminal": "start"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 591.045777852612,
+			"y": 368.45454383433787,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:5IMVAK23wO5R6KMifH2RV",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "dashed",
+				"size": "s",
+				"fill": "semi",
+				"color": "yellow",
+				"labelColor": "black",
+				"bend": -25.31476162526319,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": -48.33332824707031,
+					"y": 201.6666717529297
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "aDmVA43G",
+			"typeName": "shape"
+		},
+		{
+			"x": 761.7124648643307,
+			"y": 491.12121558726756,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:uCBiBJH1rsSA6dZ56c166",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 174.5104217529297,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.765057011563198,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "knowledge cut-off"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "a7zTbBeG",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:smY2GbeWA4evCS3cuZCO8",
+			"type": "arrow",
+			"fromId": "shape:fRlaWvB2iRjQjlCp5lUin",
+			"toId": "shape:_cHnhkYykmsbaOmuQjAfT",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.445134891486316,
+					"y": 0.17870694240607324
+				},
+				"snap": "none",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"meta": {},
+			"id": "binding:XAhWAGyxOhQRjFYisSc_b",
+			"type": "arrow",
+			"fromId": "shape:bLyNQJzDLNby2ydzU_XIi",
+			"toId": "shape:8NK3S2FOCDDBaUp_H5Tp4",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.37949848598055885,
+					"y": 0.16697770697559047
+				},
+				"snap": "none",
+				"terminal": "start"
+			},
+			"typeName": "binding"
+		},
+		{
+			"editingShapeId": "shape:xC48xb4tGLrLcIIGbxgf1",
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:xC48xb4tGLrLcIIGbxgf1"
+			],
+			"hoveredShapeId": "shape:xC48xb4tGLrLcIIGbxgf1",
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:G3BFbaWZOCVW-5gmric6J",
+			"pageId": "page:G3BFbaWZOCVW-5gmric6J",
+			"typeName": "instance_page_state"
+		},
+		{
+			"meta": {},
+			"id": "binding:M5dYHj1Q2Ww3x0xq6AJVM",
+			"type": "arrow",
+			"fromId": "shape:e349BJ0D4jh-OhRWS5kQn",
+			"toId": "shape:YqG6U4zctbM-c2XuxK-rb",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.40767997089015395,
+					"y": 0.6593636523076576
+				},
+				"snap": "none",
+				"terminal": "start"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 181.6666717529297,
+			"y": -386.3333282470703,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:MSJTgcijBe9pioeWk1E9b",
+			"type": "text",
+			"props": {
+				"color": "yellow",
+				"size": "m",
+				"w": 167.52084350585938,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Invoking LLM"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a1pyYB3V",
+			"typeName": "shape"
+		},
+		{
+			"x": 827.045777852612,
+			"y": 197.78787208140818,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:XfJ4u1kOih833wR3GR_h4",
+			"type": "line",
+			"props": {
+				"dash": "dashed",
+				"size": "s",
+				"color": "grey",
+				"spline": "line",
+				"points": {
+					"a1": {
+						"id": "a1",
+						"index": "a1",
+						"x": 0,
+						"y": 0
+					},
+					"a24x9MgV": {
+						"id": "a24x9MgV",
+						"index": "a24x9MgV",
+						"x": -1,
+						"y": 291.66668701171875
+					}
+				},
+				"scale": 1
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "a6TL0vsV",
+			"typeName": "shape"
+		},
+		{
+			"x": 30.011423084293824,
+			"y": 10.898944945426194,
+			"z": 0.8011263650317068,
+			"meta": {},
+			"id": "camera:page:aOnyP85v_z5P9dfj0ZfH9",
+			"typeName": "camera"
+		},
+		{
+			"meta": {},
+			"id": "binding:mbRxUlYnO_P4oYSVifIQS",
+			"type": "arrow",
+			"fromId": "shape:ZmQ69cQqVVL5ECxTgNiy4",
+			"toId": "shape:rSj7_nbReM4tzC7AUjRve",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.6228999360074132,
+					"y": 0.7056286586845949
+				},
+				"snap": "none",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"meta": {},
+			"id": "binding:Bkvuw68hp_z-9Zgc8pIlw",
+			"type": "arrow",
+			"fromId": "shape:ZmQ69cQqVVL5ECxTgNiy4",
+			"toId": "shape:GjxzDEBKAglDjCfaya_n9",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.1598119844042726,
+					"y": 0.6755614565922874
+				},
+				"snap": "none",
+				"terminal": "start"
+			},
+			"typeName": "binding"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [
+				"shape:Kt4d3WwGu81CAVqPiMzb5"
+			],
+			"hoveredShapeId": null,
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:HhmFImNgzPD7a0L-HBari",
+			"pageId": "page:HhmFImNgzPD7a0L-HBari",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": 226.33334350585938,
+			"y": -144.3333282470703,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:nhyznZHvIHOri23aGHaZt",
+			"type": "text",
+			"props": {
+				"color": "blue",
+				"size": "s",
+				"w": 115.375,
+				"font": "sans",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Sample Code:"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a3vA4RJV",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "binding:AzWQphN1J2NKooakF9FoB",
+			"type": "arrow",
+			"fromId": "shape:5IMVAK23wO5R6KMifH2RV",
+			"toId": "shape:8NK3S2FOCDDBaUp_H5Tp4",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.6510860680823201,
+					"y": 0.21477943849730363
+				},
+				"snap": "none",
+				"terminal": "end"
+			},
+			"typeName": "binding"
+		},
+		{
+			"meta": {},
+			"id": "binding:UfTJjeXg1vgI9SEXMUdgy",
+			"type": "arrow",
+			"fromId": "shape:fRlaWvB2iRjQjlCp5lUin",
+			"toId": "shape:HmK_YHd3rrP-tNit8O0on",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.7421340427104116,
+					"y": 0.7743362831858407
+				},
+				"snap": "none",
+				"terminal": "start"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 281.1216080044483,
+			"y": -352.5255296448711,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:46MYX-odWK3qU0CBmXd5n",
+			"type": "text",
+			"props": {
+				"color": "green",
+				"size": "s",
+				"w": 1678.1771240234375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Groq Structured Outputs allow the model to return responses conforming to a JSON Schema. "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "In strict mode, constrained decoding guarantees valid JSON and 100% schema compliance, making it ideal for production-grade AI systems, agents, and data extraction pipelines."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:HhmFImNgzPD7a0L-HBari",
+			"index": "a7jwpIJV",
+			"typeName": "shape"
+		},
+		{
+			"x": 49.44518373375513,
+			"y": 19.06495170021492,
+			"z": 0.6289899932145684,
+			"meta": {},
+			"id": "camera:page:G3BFbaWZOCVW-5gmric6J",
+			"typeName": "camera"
+		},
+		{
+			"meta": {},
+			"id": "binding:rQz5rgWiqbIoXj1DqejaS",
+			"type": "arrow",
+			"fromId": "shape:5IMVAK23wO5R6KMifH2RV",
+			"toId": "shape:HmK_YHd3rrP-tNit8O0on",
+			"props": {
+				"isPrecise": true,
+				"isExact": false,
+				"normalizedAnchor": {
+					"x": 0.12585481566090173,
+					"y": 0.870206444664339
+				},
+				"snap": "none",
+				"terminal": "start"
+			},
+			"typeName": "binding"
+		},
+		{
+			"x": 838.0458388877682,
+			"y": 403.4545285755488,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:ivItiRNFieHepIwhBJAL_",
+			"type": "text",
+			"props": {
+				"color": "red",
+				"size": "s",
+				"w": 229.375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "LLM doesn't know what "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "happened after."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "aA3Hq0oV",
+			"typeName": "shape"
+		},
+		{
+			"x": 266.3880040884342,
+			"y": 448.67350558103766,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:rCXRAymt6X_EzXlYngzg4",
+			"type": "text",
+			"props": {
+				"color": "light-violet",
+				"size": "s",
+				"w": 537.2604370117188,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.741758392462725,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 2
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "2. Best Effort Mode ("
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "code"
+										}
+									],
+									"text": "strict: false"
+								},
+								{
+									"type": "text",
+									"text": ")"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Default mode."
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Characteristics"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "✅ Tries to follow schema"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "❌ May return wrong field types"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "❌ May miss required fields"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "❌ Can produce schema validation errors"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							}
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Use Cases"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Development"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Rapid prototyping"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Models that don't support strict mode"
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:HhmFImNgzPD7a0L-HBari",
+			"index": "a681Qv6V",
+			"typeName": "shape"
+		},
+		{
+			"x": 103.98231976832817,
+			"y": 415.01600365797907,
+			"z": 0.6561000000000001,
+			"meta": {},
+			"id": "camera:page:HhmFImNgzPD7a0L-HBari",
+			"typeName": "camera"
+		},
+		{
+			"x": 658.045777852612,
+			"y": 349.7878720814082,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:vXWjd5_KUXmMX33N9tsFK",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "s",
+				"fill": "semi",
+				"color": "grey",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 0.333343505859375,
+					"y": 90.33334350585938
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "a52ILnOV",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Invoking LLM",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {
+				"tldraw:font": "draw",
+				"tldraw:color": "yellow",
+				"tldraw:size": "s",
+				"tldraw:geo": "x-box",
+				"tldraw:fill": "semi",
+				"tldraw:dash": "dashed"
+			},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 1015.3333740234375,
+				"h": 564
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 1.5,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"cameraState": "idle",
+			"id": "instance:instance",
+			"currentPageId": "page:G3BFbaWZOCVW-5gmric6J",
+			"typeName": "instance"
+		},
+		{
+			"x": 291.79071332375946,
+			"y": 827.1726870903822,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Kt4d3WwGu81CAVqPiMzb5",
+			"type": "text",
+			"props": {
+				"color": "red",
+				"size": "s",
+				"w": 631.8854370117188,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "READ DOCS FOR EVERY LLM PROVIDER FOR RESPONSE FORMATTING"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:HhmFImNgzPD7a0L-HBari",
+			"index": "aAjelKOV",
+			"typeName": "shape"
+		},
+		{
+			"x": 735.7124648643307,
+			"y": 371.12121558726756,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:fRlaWvB2iRjQjlCp5lUin",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "dashed",
+				"size": "s",
+				"fill": "semi",
+				"color": "yellow",
+				"labelColor": "black",
+				"bend": -29.543164307508246,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 13,
+					"y": 211.66665649414062
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "aFrUKwY8",
+			"typeName": "shape"
+		},
+		{
+			"x": 232.6666717529297,
+			"y": 34.66668701171875,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:Kw4mFcFZ-8hTawhI60R6v",
+			"type": "text",
+			"props": {
+				"color": "violet",
+				"size": "s",
+				"w": 107.21875,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Two Modes"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:HhmFImNgzPD7a0L-HBari",
+			"index": "a4NjPogV",
+			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "page:aOnyP85v_z5P9dfj0ZfH9",
+			"name": "LLM Settings",
+			"index": "a27qgKIV",
+			"typeName": "page"
+		},
+		{
+			"x": 1124.3791518760495,
+			"y": 341.7878720814082,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:8Io24ZfUjY0_RECpfsoga",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "solid",
+				"size": "s",
+				"fill": "semi",
+				"color": "green",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": -0.3333740234375,
+					"y": 131
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "aBYLLm9V",
+			"typeName": "shape"
+		},
+		{
+			"x": 505.045777852612,
+			"y": 579.7878720814082,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:bLyNQJzDLNby2ydzU_XIi",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "solid",
+				"size": "s",
+				"fill": "semi",
+				"color": "yellow",
+				"labelColor": "black",
+				"bend": -83.16388914037265,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 70.33334350585938,
+					"y": -190.3333282470703
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "aEkSVZCV",
+			"typeName": "shape"
+		},
+		{
+			"x": 1068.7124648643307,
+			"y": 305.4545285755488,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:AIds588wDymUv36PDbBJi",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "s",
+				"w": 101.03125,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "we're here"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "aCVQIp1V",
+			"typeName": "shape"
+		},
+		{
+			"x": 176,
+			"y": 132,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:P4Vpga2zV9OrTiVuEX_mQ",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 746.8854370117188,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Used to interact with external resources, such as APIs, databases and the web."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "a2ChUI1l",
+			"typeName": "shape"
+		},
+		{
+			"x": 266.89611874083096,
+			"y": 777.8916125769223,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:tRnmv60Cw4LsrxPKgpILW",
+			"type": "text",
+			"props": {
+				"color": "light-blue",
+				"size": "s",
+				"w": 748.3333740234375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "more info: "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "https://chatgpt.com/share/6a3c19ad-e284-83e8-8cb8-b22068b58e68",
+												"target": "_blank",
+												"rel": "noopener noreferrer nofollow",
+												"class": null
+											}
+										}
+									],
+									"text": "https://chatgpt.com/share/6a3c19ad-e284-83e8-8cb8-b22068b58e68"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:HhmFImNgzPD7a0L-HBari",
+			"index": "a906aAgV",
+			"typeName": "shape"
+		},
+		{
+			"x": 828.3791518760495,
+			"y": 481.7878720814082,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:WaY5Lz2C8lQHr3YHm3qYE",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "solid",
+				"size": "s",
+				"fill": "semi",
+				"color": "grey",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": 352.00006103515625,
+					"y": -6
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "time"
+								}
+							]
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "draw",
+				"scale": 1
+			},
+			"parentId": "page:G3BFbaWZOCVW-5gmric6J",
+			"index": "a9qh7BuV",
+			"typeName": "shape"
+		},
+		{
+			"x": 160.27885662217642,
+			"y": 154.59561528471988,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:obE899HKEmi8eAueM4MIf",
+			"type": "text",
+			"props": {
+				"color": "grey",
+				"size": "s",
+				"w": 932.1914867899497,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 0.8864559025668893,
+				"richText": {
+					"type": "doc",
+					"attrs": {
+						"dir": "auto"
+					},
+					"content": [
+						{
+							"type": "bulletList",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Temperature"
+												},
+												{
+													"type": "text",
+													"text": ": What sampling temperature to use, between 0 and 2. Higher values like 0.8 will"
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "   make the output more random, while lower values like 0.2 will make it more"
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "   focused and deterministic. We generally recommend altering this or top_p but not"
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "   both. For creative writing -> temp increase, for deterministic tasks -> temp dec. Temp can be tuned "
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "       with hit and trial."
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "top_p: "
+												},
+												{
+													"type": "text",
+													"text": "An alternative to sampling with temperature, called nucleus sampling, where the"
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": " model considers the results of the tokens with top_p probability mass. So 0.1"
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": " means only the tokens comprising the top 10% probability mass are considered. We"
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "  generally recommend altering this or temperature but not both. Range: 0-1"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "stop:"
+												},
+												{
+													"type": "text",
+													"text": " Up to 4 sequences where the API will stop generating further tokens. The"
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "returned text will not contain the stop sequence. STOP SEQUENCE"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": " "
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "max_completion_tokens"
+												},
+												{
+													"type": "text",
+													"text": ": The maximum number of tokens that can be generated in the chat completion. The"
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": " total length of input tokens and generated tokens is limited by the model's"
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": " context length."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "frequency_penalty"
+												},
+												{
+													"type": "text",
+													"text": ": This is not yet supported by any of our models. Number between -2.0 and 2.0."
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": " Positive values penalize new tokens based on their existing frequency in the"
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": " text so far, decreasing the model's likelihood to repeat the same line verbatim."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"attrs": {
+										"dir": "auto"
+									},
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "presence_penalty"
+												},
+												{
+													"type": "text",
+													"text": ": Number between -2.0 and 2.0."
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Positive values penalize new tokens based on whether they appear in the text so"
+												}
+											]
+										},
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "far, increasing the model's likelihood to talk about new topics."
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:aOnyP85v_z5P9dfj0ZfH9",
+			"index": "a29GXzIl",
+			"typeName": "shape"
+		},
+		{
+			"x": 365.20107784630613,
+			"y": 266.537139610453,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:ZmQ69cQqVVL5ECxTgNiy4",
+			"type": "arrow",
+			"props": {
+				"kind": "arc",
+				"elbowMidPoint": 0.5,
+				"dash": "draw",
+				"size": "s",
+				"fill": "solid",
+				"color": "black",
+				"labelColor": "black",
+				"bend": 0,
+				"start": {
+					"x": 0,
+					"y": 0
+				},
+				"end": {
+					"x": -343.71956953439735,
+					"y": -136.73519169901977
+				},
+				"arrowheadStart": "none",
+				"arrowheadEnd": "arrow",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				},
+				"labelPosition": 0.5,
+				"font": "sans",
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a7dzWvPl",
+			"typeName": "shape"
+		}
+	]
+}
