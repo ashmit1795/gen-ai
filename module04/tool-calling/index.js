@@ -1,6 +1,7 @@
 import Groq from "groq-sdk";
 import dotenv from "dotenv";
 import { tavily } from "@tavily/core";
+import readline from "node:readline/promises";
 
 dotenv.config();
 
@@ -120,71 +121,156 @@ const tvly = tavily({ apiKey: process.env.TAVILY_API_KEY });
 // }
 
 // DYNAMIC TOOL CALLING EXAMPLE: IN THIS EXAMPLE, THE LLM WILL CALL THE TOOL MULTIPLE TIMES IF IT NEEDS TO GET INFORMATION FROM THE WEB. IT WILL CALL THE TOOL ONCE AND THEN USE THE INFORMATION FROM THE TOOL TO ANSWER THE USER'S QUESTION. IF IT NEEDS MORE INFORMATION, IT WILL CALL THE TOOL AGAIN WITH A NEW QUERY. THIS ALLOWS THE LLM TO GET MORE UP-TO-DATE INFORMATION FROM THE WEB AND PROVIDE MORE ACCURATE ANSWERS TO THE USER'S QUESTIONS. THIS IS SCALABLE AND FLEXIBLE, AS THE LLM CAN CALL THE TOOL AS MANY TIMES AS IT NEEDS TO GET THE INFORMATION IT NEEDS. IT CAN ALSO CALL THE TOOL WITH DIFFERENT QUERIES TO GET DIFFERENT INFORMATION FROM THE WEB. THIS ALLOWS THE LLM TO PROVIDE MORE COMPREHENSIVE ANSWERS TO THE USER'S QUESTIONS.
+// async function main() {
+// 	const messages = [
+// 		{
+// 			role: "system",
+// 			content:
+// 				"You are a helpful assistant made by Ashmit. You are Jarvis, a large language model. You are here to help answer any questions the user may have or just chat if they'd like. You have access to a web search tool called TAVILY API, which allows you to perform web searches and retrieve information from the internet. You can use this tool to provide up-to-date information to the user. When the user asks a question that requires current information, you should use the TAVILY API to perform a web search and provide the most relevant and accurate answer based on the search results.",
+// 		},
+// 		{
+// 			role: "user",
+// 			// content: "hi",
+// 			content: "Who is the longest serving prime minister of India ?",
+// 		},
+// 	];
+
+// 	while (true) {
+// 		const completion = await groq.chat.completions.create({
+// 			model: "llama-3.3-70b-versatile",
+// 			temperature: 0,
+// 			tools: [
+// 				{
+// 					type: "function",
+// 					function: {
+// 						name: "webSearch",
+// 						description: "Perform a web search using TAVILY API. ", // high quality detailed description of the tool
+// 						parameters: {
+// 							type: "object",
+// 							properties: {
+// 								query: {
+// 									type: "string",
+// 									description:
+// 										"The search query to be used for the web search. This should be a concise and clear query that accurately represents the information the user is seeking.",
+// 								},
+// 							},
+// 							required: ["query"],
+// 						},
+// 					},
+// 				},
+// 			],
+// 			tool_choice: "auto",
+// 			messages: messages,
+// 		});
+
+// 		messages.push(completion.choices[0]?.message);
+
+// 		const toolCalls = completion.choices[0]?.message?.tool_calls || [];
+// 		if (toolCalls.length === 0) {
+// 			console.log(completion.choices[0]?.message?.content || "No response from the model.");
+// 			break;
+// 		}
+
+// 		for (const toolCall of toolCalls) {
+// 			const type = toolCall.type;
+// 			const functionName = toolCall.function.name;
+// 			if (type === "function" && functionName === "webSearch") {
+// 				const args = JSON.parse(toolCall.function.arguments);
+// 				const searchResults = await webSearch(args);
+// 				messages.push({
+// 					tool_call_id: toolCall.id,
+// 					role: "tool",
+// 					content: searchResults,
+// 					name: functionName,
+// 				});
+// 			}
+// 		}
+// 	}
+// }
+
 async function main() {
+	// This is the readline interface that allows the user to input questions and receive answers from the LLM. The user can ask a question, and the LLM will answer it. If the user wants to ask another question, they can do so, and the LLM will answer that question as well. This allows the user to have a conversation with the LLM and get answers to multiple questions in one session.
+	const rl = readline.createInterface({
+		input: process.stdin,
+		output: process.stdout,
+	});
+
 	const messages = [
 		{
 			role: "system",
 			content:
-				"You are a helpful assistant made by Ashmit. You are Jarvis, a large language model. You are here to help answer any questions the user may have or just chat if they'd like. You have access to a web search tool called TAVILY API, which allows you to perform web searches and retrieve information from the internet. You can use this tool to provide up-to-date information to the user. When the user asks a question that requires current information, you should use the TAVILY API to perform a web search and provide the most relevant and accurate answer based on the search results.",
-		},
-		{
-			role: "user",
-			// content: "hi",
-			content: "Who is the longest serving prime minister of India ?",
+				`You are a helpful assistant made by Ashmit. You are Jarvis, a large language model. You are here to help answer any questions the user may have or just chat if they'd like. You have access to a web search tool called TAVILY API, which allows you to perform web searches and retrieve information from the internet. You can use this tool to provide up-to-date information to the user. When the user asks a question that requires current information, you should use the TAVILY API to perform a web search and provide the most relevant and accurate answer based on the search results.Current date is ${new Date().toUTCString()}.`,
 		},
 	];
 
+	// This outer loop is for the user to ask multiple questions. The user can ask a question, and the LLM will answer it. If the user wants to ask another question, they can do so, and the LLM will answer that question as well. This allows the user to have a conversation with the LLM and get answers to multiple questions in one session.
 	while (true) {
-		const completion = await groq.chat.completions.create({
-			model: "llama-3.3-70b-versatile",
-			temperature: 0,
-			tools: [
-				{
-					type: "function",
-					function: {
-						name: "webSearch",
-						description: "Perform a web search using TAVILY API. ", // high quality detailed description of the tool
-						parameters: {
-							type: "object",
-							properties: {
-								query: {
-									type: "string",
-									description:
-										"The search query to be used for the web search. This should be a concise and clear query that accurately represents the information the user is seeking.",
-								},
-							},
-							required: ["query"],
-						},
-					},
-				},
-			],
-			tool_choice: "auto",
-			messages: messages,
-		});
-
-		messages.push(completion.choices[0]?.message);
-
-		const toolCalls = completion.choices[0]?.message?.tool_calls || [];
-		if (toolCalls.length === 0) {
-			console.log(completion.choices[0]?.message?.content || "No response from the model.");
+		const userInput = await rl.question("You: ");
+		if (userInput.toLowerCase() === "bye") { 
+			console.log("Goodbye!");
 			break;
 		}
+		messages.push({
+			role: "user",
+			content: userInput,
+		});
 
-		for (const toolCall of toolCalls) {
-			const type = toolCall.type;
-			const functionName = toolCall.function.name;
-			if (type === "function" && functionName === "webSearch") {
-				const args = JSON.parse(toolCall.function.arguments);
-				const searchResults = await webSearch(args);
-				messages.push({
-					tool_call_id: toolCall.id,
-					role: "tool",
-					content: searchResults,
-					name: functionName,
-				});
+		// This is the react loop of the agent. It will keep calling the LLM until it gets a response that does not require a tool call. The LLM will call the tool when it needs to get information from the web. It will call the tool with a query that is relevant to the user's question. The tool will return the search results, which the LLM will use to answer the user's question. If the LLM needs more information, it will call the tool again with a new query. This allows the LLM to get more up-to-date information from the web and provide more accurate answers to the user's questions.
+		while (true) {
+			const completion = await groq.chat.completions.create({
+				model: "llama-3.3-70b-versatile",
+				temperature: 0,
+				tools: [
+					{
+						type: "function",
+						function: {
+							name: "webSearch",
+							description: "Perform a web search using TAVILY API. ", // high quality detailed description of the tool
+							parameters: {
+								type: "object",
+								properties: {
+									query: {
+										type: "string",
+										description:
+											"The search query to be used for the web search. This should be a concise and clear query that accurately represents the information the user is seeking.",
+									},
+								},
+								required: ["query"],
+							},
+						},
+					},
+				],
+				tool_choice: "auto",
+				messages: messages,
+			});
+
+			messages.push(completion.choices[0]?.message);
+
+			const toolCalls = completion.choices[0]?.message?.tool_calls || [];
+			if (toolCalls.length === 0) {
+				console.log("Assistant: " + completion.choices[0]?.message?.content || "No response from the model.");
+				break;
+			}
+
+			for (const toolCall of toolCalls) {
+				const type = toolCall.type;
+				const functionName = toolCall.function.name;
+				if (type === "function" && functionName === "webSearch") {
+					const args = JSON.parse(toolCall.function.arguments);
+					const searchResults = await webSearch(args);
+					messages.push({
+						tool_call_id: toolCall.id,
+						role: "tool",
+						content: searchResults,
+						name: functionName,
+					});
+				}
 			}
 		}
 	}
+
+	rl.close();
+	process.exit(0);
 }
 
 main().catch((error) => {
