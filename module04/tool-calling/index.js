@@ -9,6 +9,117 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 const tvly = tavily({ apiKey: process.env.TAVILY_API_KEY });
 
 // THIS TOOL CALLING EXAMPLE IS A SIMPLE NON-DYNAMIC TOOL CALLING EXAMPLE. IT SHOWS HOW TO CALL A TOOL (TAVILY API) FROM THE LLM (JARVIS) TO GET UP-TO-DATE INFORMATION FROM THE WEB. THE LLM WILL CALL THE TOOL WHEN IT NEEDS TO GET INFORMATION THAT IS NOT AVAILABLE IN ITS KNOWLEDGE BASE. IF AGENT WANTS TO CALL A TOOL, MULTIPLE TIMES, IT CAN'T DO THAT AS OF NOW, IN THIS EXAMPLE. IT WILL CALL THE TOOL ONCE AND THEN USE THE INFORMATION FROM THE TOOL TO ANSWER THE USER'S QUESTION. IF AGENT WANTS TO CALL A TOOL MULTIPLE TIMES, IT CAN'T DO THAT AS OF NOW, IN THIS EXAMPLE. IT WILL CALL THE TOOL ONCE AND THEN USE THE INFORMATION FROM THE TOOL TO ANSWER THE USER'S QUESTION.
+// async function main() {
+// 	const messages = [
+// 		{
+// 			role: "system",
+// 			content:
+// 				"You are a helpful assistant made by Ashmit. You are Jarvis, a large language model. You are here to help answer any questions the user may have or just chat if they'd like. You have access to a web search tool called TAVILY API, which allows you to perform web searches and retrieve information from the internet. You can use this tool to provide up-to-date information to the user. When the user asks a question that requires current information, you should use the TAVILY API to perform a web search and provide the most relevant and accurate answer based on the search results.",
+// 		},
+// 		{
+// 			role: "user",
+// 			content: "When will iphone 17 be released ?", // LLM will answer this question based on its knowledge cutoff date. It will not have information about events or releases that occurred after that date.
+// 		},
+// 	];
+
+// 	const completion = await groq.chat.completions.create({
+// 		model: "llama-3.3-70b-versatile",
+// 		temperature: 0,
+// 		tools: [
+// 			{
+// 				type: "function",
+// 				function: {
+// 					name: "webSearch",
+// 					description: "Perform a web search using TAVILY API. ", // high quality detailed description of the tool
+// 					parameters: {
+// 						type: "object",
+// 						properties: {
+// 							query: {
+// 								type: "string",
+// 								description:
+// 									"The search query to be used for the web search. This should be a concise and clear query that accurately represents the information the user is seeking.",
+// 							},
+// 						},
+// 						required: ["query"],
+// 					},
+// 				},
+// 			},
+// 		],
+// 		tool_choice: "auto",
+// 		messages: messages,
+// 	});
+
+// 	console.log(JSON.stringify(completion.choices[0]?.message, null, 2));
+// 	/*
+//         {
+//         "role": "assistant",
+//         "tool_calls": [
+//                 {
+//                     "id": "hyrbs9g59",
+//                     "type": "function",
+//                     "function": {
+//                         "name": "webSearch",
+//                         "arguments": "{\"query\":\"iPhone 17 release date\"}"
+//                     }
+//                 }
+//             ]
+//         }
+//     */
+
+// 	messages.push(completion.choices[0]?.message);
+
+//     const toolCalls = completion.choices[0]?.message?.tool_calls || [];
+//     if (!toolCalls) {
+//         console.log(completion.choices[0]?.message?.content || "No response from the model.");
+//         return;
+// 	}
+
+// 	for (const toolCall of toolCalls) {
+// 		const type = toolCall.type;
+// 		const functionName = toolCall.function.name;
+//         if (type === "function" && functionName === "webSearch") {
+//             const args = JSON.parse(toolCall.function.arguments);
+//             const searchResults = await webSearch(args);
+// 			messages.push({
+// 				tool_call_id: toolCall.id,
+// 				role: "tool",
+// 				content: searchResults,
+// 				name: functionName,
+// 			});
+// 		}
+
+// 		const completion2 = await groq.chat.completions.create({
+// 			model: "llama-3.3-70b-versatile",
+// 			temperature: 0,
+// 			tools: [
+// 				{
+// 					type: "function",
+// 					function: {
+// 						name: "webSearch",
+// 						description: "Perform a web search using TAVILY API. ", // high quality detailed description of the tool
+// 						parameters: {
+// 							type: "object",
+// 							properties: {
+// 								query: {
+// 									type: "string",
+// 									description:
+// 										"The search query to be used for the web search. This should be a concise and clear query that accurately represents the information the user is seeking.",
+// 								},
+// 							},
+// 							required: ["query"],
+// 						},
+// 					},
+// 				},
+// 			],
+// 			tool_choice: "auto",
+// 			messages: messages,
+// 		});
+
+// 		console.log(JSON.stringify(completion2.choices[0]?.message.content, null, 2));
+//     }
+// }
+
+// DYNAMIC TOOL CALLING EXAMPLE: IN THIS EXAMPLE, THE LLM WILL CALL THE TOOL MULTIPLE TIMES IF IT NEEDS TO GET INFORMATION FROM THE WEB. IT WILL CALL THE TOOL ONCE AND THEN USE THE INFORMATION FROM THE TOOL TO ANSWER THE USER'S QUESTION. IF IT NEEDS MORE INFORMATION, IT WILL CALL THE TOOL AGAIN WITH A NEW QUERY. THIS ALLOWS THE LLM TO GET MORE UP-TO-DATE INFORMATION FROM THE WEB AND PROVIDE MORE ACCURATE ANSWERS TO THE USER'S QUESTIONS. THIS IS SCALABLE AND FLEXIBLE, AS THE LLM CAN CALL THE TOOL AS MANY TIMES AS IT NEEDS TO GET THE INFORMATION IT NEEDS. IT CAN ALSO CALL THE TOOL WITH DIFFERENT QUERIES TO GET DIFFERENT INFORMATION FROM THE WEB. THIS ALLOWS THE LLM TO PROVIDE MORE COMPREHENSIVE ANSWERS TO THE USER'S QUESTIONS.
 async function main() {
 	const messages = [
 		{
@@ -18,77 +129,13 @@ async function main() {
 		},
 		{
 			role: "user",
-			content: "When will iphone 17 be released ?", // LLM will answer this question based on its knowledge cutoff date. It will not have information about events or releases that occurred after that date.
+			// content: "hi",
+			content: "Who is the longest serving prime minister of India ?",
 		},
 	];
 
-	const completion = await groq.chat.completions.create({
-		model: "llama-3.3-70b-versatile",
-		temperature: 0,
-		tools: [
-			{
-				type: "function",
-				function: {
-					name: "webSearch",
-					description: "Perform a web search using TAVILY API. ", // high quality detailed description of the tool
-					parameters: {
-						type: "object",
-						properties: {
-							query: {
-								type: "string",
-								description:
-									"The search query to be used for the web search. This should be a concise and clear query that accurately represents the information the user is seeking.",
-							},
-						},
-						required: ["query"],
-					},
-				},
-			},
-		],
-		tool_choice: "auto",
-		messages: messages,
-	});
-
-	console.log(JSON.stringify(completion.choices[0]?.message, null, 2));
-	/*
-        {
-        "role": "assistant",
-        "tool_calls": [
-                {
-                    "id": "hyrbs9g59",
-                    "type": "function",
-                    "function": {
-                        "name": "webSearch",
-                        "arguments": "{\"query\":\"iPhone 17 release date\"}"
-                    }
-                }
-            ]
-        }
-    */
-
-	messages.push(completion.choices[0]?.message);
-
-    const toolCalls = completion.choices[0]?.message?.tool_calls || [];
-    if (!toolCalls) {
-        console.log(completion.choices[0]?.message?.content || "No response from the model.");
-        return;
-	}
-
-	for (const toolCall of toolCalls) {
-		const type = toolCall.type;
-		const functionName = toolCall.function.name;
-        if (type === "function" && functionName === "webSearch") {
-            const args = JSON.parse(toolCall.function.arguments);
-            const searchResults = await webSearch(args);
-			messages.push({
-				tool_call_id: toolCall.id,
-				role: "tool",
-				content: searchResults,
-				name: functionName,
-			});
-		}
-
-		const completion2 = await groq.chat.completions.create({
+	while (true) {
+		const completion = await groq.chat.completions.create({
 			model: "llama-3.3-70b-versatile",
 			temperature: 0,
 			tools: [
@@ -115,11 +162,30 @@ async function main() {
 			messages: messages,
 		});
 
-		console.log(JSON.stringify(completion2.choices[0]?.message.content, null, 2));
-    }
+		messages.push(completion.choices[0]?.message);
+
+		const toolCalls = completion.choices[0]?.message?.tool_calls || [];
+		if (toolCalls.length === 0) {
+			console.log(completion.choices[0]?.message?.content || "No response from the model.");
+			break;
+		}
+
+		for (const toolCall of toolCalls) {
+			const type = toolCall.type;
+			const functionName = toolCall.function.name;
+			if (type === "function" && functionName === "webSearch") {
+				const args = JSON.parse(toolCall.function.arguments);
+				const searchResults = await webSearch(args);
+				messages.push({
+					tool_call_id: toolCall.id,
+					role: "tool",
+					content: searchResults,
+					name: functionName,
+				});
+			}
+		}
+	}
 }
-
-
 
 main().catch((error) => {
 	console.error("Error:", error);
