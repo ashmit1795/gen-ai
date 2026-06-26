@@ -17,11 +17,19 @@ app.get("/", (req, res) => {
 });
 
 app.post("/generate", async (req, res) => { 
-    const { message } = req.body;
+    const { message, threadId } = req.body;
+
+    if (!message) {
+        return res.status(400).json({ error: "Message is required" });
+    }
+
+    if (!threadId) {
+        return res.status(400).json({ error: "Thread ID is required" });
+    }
 
     console.log("Received message:", message);
 
-    const response = await generateResponse(message);
+    const response = await generateResponse(message, threadId);
 
     res.status(200).json({ message: response });
 });

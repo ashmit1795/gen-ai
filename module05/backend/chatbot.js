@@ -1,6 +1,9 @@
 import Groq from "groq-sdk";
 import dotenv from "dotenv";
 import { tavily } from "@tavily/core";
+import NodeCache from "node-cache";
+
+const cache = new NodeCache({ stdTTL: 60 * 60 * 24 }); // Cache results for 1 hour
 
 dotenv.config();
 
@@ -8,9 +11,9 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 const tvly = tavily({ apiKey: process.env.TAVILY_API_KEY });
 
-export async function generateResponse(userMessage) {
+export async function generateResponse(userMessage, threadId) {
 
-    const messages = [
+    const baseMessages = [
         
         {
             // Few-shot prompting: Provide the LLM with a few examples of how to respond to user messages. This helps the LLM understand the desired behavior and style of responses.
@@ -31,7 +34,9 @@ export async function generateResponse(userMessage) {
             Jarvis: The capital of France is Paris.
             `,
 		},
-	];
+    ];
+
+    const messages = cache.get(threadId) || baseMessages; 
 
 	messages.push({
 		role: "user",
@@ -70,7 +75,9 @@ export async function generateResponse(userMessage) {
 		messages.push(completion.choices[0]?.message);
 
 		const toolCalls = completion.choices[0]?.message?.tool_calls || [];
-		if (toolCalls.length === 0) {
+        if (toolCalls.length === 0) {
+            cache.set(threadId, messages);
+            console.log(cache.get(threadId));
 			return completion.choices[0]?.message?.content || "I'm sorry, I couldn't generate a response.";
 		}
 
