@@ -1,4 +1,5 @@
 const BASE_URL = "http://localhost:3000";
+const uuid = Date.now().toString(36) + Math.random().toString(36); // Generate a unique thread ID based on the current timestamp 
 
 const input = document.getElementById("input");
 const chatContainer = document.getElementById("chat-container");
@@ -43,7 +44,7 @@ async function callServer(message) {
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify({ message }),
+        body: JSON.stringify({ message, threadId: uuid }),
     });
 
     if(!response.ok) {
