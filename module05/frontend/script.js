@@ -7,6 +7,10 @@ const sendButton = document.getElementById("send");
 input?.addEventListener("keyup", handleEnterKey);
 sendButton?.addEventListener("click", handleSendButtonClick);
 
+const loading = document.createElement("div");
+loading.className = "max-w-fit animate-pulse";
+loading.textContent = "Thinking...";
+
 async function generate(text) { 
     // 1. Append message to the chat container
     // 2. Clear the input field
@@ -18,9 +22,14 @@ async function generate(text) {
     chatContainer.appendChild(messageElement);
     input.value = "";
 
+    // Show loading message
+    chatContainer.appendChild(loading);
+
     // Call the server to generate a response
     const response = await callServer(text);
-    console.log("Server response:", response);
+
+    // Remove loading message
+    chatContainer.removeChild(loading);
 
     const responseElement = document.createElement("div");
     responseElement.className = "max-w-fit";
