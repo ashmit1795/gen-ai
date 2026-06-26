@@ -1,3 +1,5 @@
+const BASE_URL = "http://localhost:3000";
+
 const input = document.getElementById("input");
 const chatContainer = document.getElementById("chat-container");
 const sendButton = document.getElementById("send");
@@ -5,7 +7,7 @@ const sendButton = document.getElementById("send");
 input?.addEventListener("keyup", handleEnterKey);
 sendButton?.addEventListener("click", handleSendButtonClick);
 
-function generate(text) { 
+async function generate(text) { 
     // 1. Append message to the chat container
     // 2. Clear the input field
     // 3. Send the message to the server
@@ -16,20 +18,45 @@ function generate(text) {
     chatContainer.appendChild(messageElement);
     input.value = "";
 
+    // Call the server to generate a response
+    const response = await callServer(text);
+    console.log("Server response:", response);
+
+    const responseElement = document.createElement("div");
+    responseElement.className = "max-w-fit";
+    responseElement.textContent = response;
+    chatContainer.appendChild(responseElement);
 }
 
-function handleEnterKey(event) { 
+async function callServer(message) { 
+    const response = await fetch(`${BASE_URL}/generate`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message }),
+    });
+
+    if(!response.ok) {
+        throw new Error("Failed to generate response");
+    }
+
+    const data = await response.json();
+    return data.message;
+}
+
+async function handleEnterKey(event) { 
     if(event.key === "Enter" && !event.shiftKey) {
         event.preventDefault();
         console.log("Enter key pressed");
         const text = input.value.trim();
         if(!text) return;
-        generate(text);
+        await generate(text);
     }
 }
 
-function handleSendButtonClick() {
+async function handleSendButtonClick() {
     const text = input.value.trim();
     if(!text) return;
-    generate(text);
+    await generate(text);
 }
